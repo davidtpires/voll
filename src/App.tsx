@@ -1,12 +1,15 @@
-import { Container } from '@mui/material';
 import './App.css';
 import Cabecalho from './components/Cabecalho';
+import Container from './components/Container';
+import Titulo from './components/Titulo';
 
 function App() {
   return (
     <>
       <Cabecalho />
-      <Container></Container>
+      <Container>
+        <Titulo>Área Administrativa</Titulo>
+      </Container>
     </>
   );
 }
