@@ -30,11 +30,23 @@ function Rodape() {
             <ItemEstilizado>
                 <a href='#'>
                     <img src={facebook} alt="logo do facebook" />
-                    <img src={instagram} alt="logo do instagram" />
-                    <img src={google} alt="logo do google" />
-                    <img src={whatsapp} alt="logo do whatsapp" />
                 </a>
             </ItemEstilizado>
+            <ItemEstilizado>
+                <a href='#'>
+                    <img src={instagram} alt="logo do instagram" />
+                </a>
+            </ItemEstilizado>
+            <ItemEstilizado>
+                <a href='#'>
+                    <img src={google} alt="logo do google" />
+                </a>
+            </ItemEstilizado>
+            <ItemEstilizado>
+                <a href='#'>
+                    <img src={whatsapp} alt="logo do whatsapp" />
+                </a>
+            </ItemEstilizado>                    
         </ListaEstilizada>
         <p>2025 © Desenvolvido por David T. | Projeto fictício sem fins comerciais</p>
     </RodapeEstilizado>
