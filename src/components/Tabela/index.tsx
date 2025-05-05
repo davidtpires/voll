@@ -1,7 +1,8 @@
 import { Paper, Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 import TableContainer from "@mui/material/TableContainer";
+import IConsultas from "../../types/IConsulta";
 
-function Tabela() {
+function Tabela({ consultas }: { consultas: IConsultas[] | null }) {
   return (
     <>
       <TableContainer component={Paper}>
@@ -17,14 +18,19 @@ function Tabela() {
             </TableRow>
           </TableHead>
           <TableBody>
-            <TableRow>
-              <TableCell component="th" scope="row">22/03/2022</TableCell>
-              <TableCell>08:30</TableCell>
-              <TableCell>Dra. Ana Lúcia</TableCell>
-              <TableCell>Angiologista</TableCell>
-              <TableCell>Luana Malheiros</TableCell>
-              <TableCell>Particular</TableCell>
-            </TableRow>
+            {consultas?.map((linha) => {
+              return (
+                <TableRow>
+                  <TableCell component="th" scope="row">{linha.data}</TableCell>
+                  <TableCell>{linha.horario}</TableCell>
+                  <TableCell>{linha.profissional[0].nome}</TableCell>
+                  <TableCell>{linha.profissional[0].especialidade}</TableCell>
+                  <TableCell>{linha.paciente}</TableCell>
+                  <TableCell>{linha.modalidade}</TableCell>
+                </TableRow>
+              )
+            })}
+
           </TableBody>
         </Table>
       </TableContainer>
