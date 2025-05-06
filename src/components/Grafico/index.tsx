@@ -1,6 +1,13 @@
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
+import IProfissional from "../../types/IProfissional";
+import IConsulta from "../../types/IConsulta";
 
-function Grafico() {
+interface Props {
+    profissionais: IProfissional,
+    consultas: IConsulta
+}
+
+function Grafico({profissionais, consultas}: Props) {
     return (
         <ResponsiveContainer width="100%" height={350}>
             <BarChart
